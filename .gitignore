@@ -1,0 +1,17 @@
+# Virtual environment
+monotone-env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.log
+
+# Output files
+audio.wav
+transcript.txt
+*.mp4
+*.wav
+
+# IDE/project configuration
+.idea/
+.vscode/
