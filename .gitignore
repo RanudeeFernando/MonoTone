@@ -12,6 +12,6 @@ transcript.txt
 *.mp4
 *.wav
 
-# IDE/project configuration
+# IDE/project config
 .idea/
 .vscode/
