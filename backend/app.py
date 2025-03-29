@@ -1,6 +1,8 @@
 from moviepy import VideoFileClip
 import whisper
 import os
+import requests
+import time
 
 def extract_audio(video_path, audio_path="audio.wav"):
     clip = VideoFileClip(video_path)
@@ -26,9 +28,6 @@ with open(transcript_path, "w", encoding="utf-8") as f:
     f.write(transcript)
 
 
-import requests
-import time
-
 ASSEMBLYAI_API_KEY = "cb14b7ca7a8c4877802093c5b9ffd60f"
 audio_file_path = os.path.join(project_root,"backend/audio.wav")
 
@@ -39,7 +38,7 @@ def upload_audio(file_path):
         response = requests.post(
             'https://api.assemblyai.com/v2/upload',
             headers=headers,
-            data=f  
+            data=f
         )
     return response.json()['upload_url']
 
